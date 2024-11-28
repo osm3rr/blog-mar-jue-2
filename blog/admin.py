@@ -2,4 +2,10 @@ from django.contrib import admin
 from .models import Publication
 
 # Register your models here.
-admin.site.register(Publication)
+class PublicationAdmin(admin.ModelAdmin):
+    list_display = (
+        "title",
+        "author",
+    )
+
+admin.site.register(Publication, PublicationAdmin)
