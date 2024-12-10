@@ -4,4 +4,6 @@
     <h2>{{ publication.title }}</h2>
     <p>{{ publication.author }}</p>
     <p>{{ publication.body }}</p>
+
+    <a href="{% url 'publication_update' publication.pk %}">Edit</a>
 {% endblock content %}
